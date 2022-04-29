@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新标签页</title>
+    <link rel="stylesheet" type="text/css" href="base.css" />
+</head>
+
+<body>
+    <div id="content">
+        <div id="showClockBtn" class="emptyAddBtn" style="display: none;" title="点击添加时间显示屏">
+            + 
+        </div>
+        <div class="clockWrap" id="clockWrap">
+            <div class="hideClockBtn baseBtn" id="hideClockBtn" title="点击隐藏时间"> - </div>
+            <p id="time"></p>
+            <p id="date"></p>
+        <!-- <p id="text">本月剩余 <span id="residue"></span> 天</p> -->
+        </div>
+        
+        <div class="bottomWrap">
+            <div class="middleWrap">
+                <div class="baseView bookmarksView showClass" id="bookmarksView">
+                    <div class="addBtn baseBtn" id="addBtn" title="点击新增标签"> + </div>
+                    <div class="delBtn baseBtn bottomPosition" id="delBtn" title="点击删除标签"> - </div>
+
+                    <a class="item" title="CSDN" target="_blank"
+                        href="https://blog.csdn.net/fifteen718">
+                        <div class="tile-icon">
+                            <img draggable="false" alt=""
+                                src="https://g.csdnimg.cn/static/logo/favicon32.ico">
+                        </div>
+                        <div class="tile-title"><span>CSDN</span></div>
+                    </a>
+
+                    <a class="item" title="GitHub" target="_blank" href="https://github.com/fifteen718">
+                        <div class="tile-icon">
+                            <img draggable="false" alt="" src="https://github.githubassets.com/favicons/favicon.png">
+                        </div>
+                        <div class="tile-title"><span>GitHub</span></div>
+                    </a>
+
+                    <a class="item" title="VueJS" target="_blank"
+                        href="https://v3.cn.vuejs.org/">
+                        <div class="tile-icon">
+                            <img draggable="false" alt=""
+                                src="https://cn.vuejs.org/images/icons/favicon-32x32.png">
+                        </div>
+                        <div class="tile-title"><span>VueJS</span></div>
+                    </a>
+
+                    <a class="item" title="知乎" target="_blank"
+                        href="https://www.zhihu.com/">
+                        <div class="tile-icon">
+                            <img draggable="false" alt=""
+                                src="https://static.zhihu.com/heifetz/favicon.ico">
+                        </div>
+                        <div class="tile-title"><span>知乎</span></div>
+                    </a>
+
+                    <a class="item" title="TinyPNG" target="_blank" href="https://tinypng.com/">
+                        <div class="tile-icon">
+                            <img draggable="false" alt="" src="https://tinypng.com/images/favicon.ico">
+                        </div>
+                        <div class="tile-title"><span>TinyPNG</span></div>
+                    </a>
+
+                </div>
+                <div class="baseView addView hideClass" id="addView">
+                    <div class="cancelBtn baseBtn" id="cancelBtn" title="点击取消操作"> ✘ </div>
+                    <div class="commitBtn baseBtn" id="commitBtn" title="点击完成操作" style="display: none;"> ✔ </div>
+                    <p class="addItem">
+                        <label><span style="color: #F56C6C;">*</span> 书签网址(必填):</label>
+                        <input id="webUrl" placeholder="请输入网站地址">
+                    </p>
+
+                    <p class="addItem">
+                        <label><span style="color: #F56C6C;">*</span> 书签名称(必填):</label>
+                        <input id="webName" placeholder="请输入书签名称">
+                    </p>
+
+                    <p class="addItem">
+                        <label>icon图标(非必填):</label>
+                        <input id="iconUrl" placeholder="请输入图标链接">
+                    </p>
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript" src="main.js"></script>

@@ -1,0 +1,348 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: url(./img/background.jpg) center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    font-family: auto;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+/* 时间显示 */
+#date {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    word-spacing: 1rem;
+}
+
+#time {
+    font-size: 10rem;
+    letter-spacing: 1rem;
+    margin: 1rem 0;
+}
+
+#text {
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+}
+
+/* 底部包裹栏 */
+.bottomWrap {
+    margin-top: 2rem;
+}
+
+.bottomWrap, .middleWrap {
+    position: relative;
+}
+
+
+/* 书签栏 */
+.baseView {
+    width: 100%;
+    min-width: 600px;
+    background-color: rgba(13,13,13,0.25);
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 8px;
+    transition: display 3s;
+}
+
+.bookmarksView {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: opacity 300ms ease-in-out;
+    visibility: visible;
+}
+
+.baseBtn {
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.baseBtn:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.resetBtn:hover {
+    background-color: rgba(245, 108, 108, .9);
+}
+
+.bottomPosition {
+    position: absolute;
+    right: -40px;
+    top: 100%;
+    margin-top: -50px;
+}
+
+.delOverBtn {
+    color: #fff;
+}
+.delOverBtn:hover {
+    background-color: rgba(66, 185, 131, .5); 
+}
+
+.item {
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent;
+    align-items: center;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 112px;
+    opacity: 1;
+    outline: none;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 300ms;
+    transition-property: left, top;
+    transition-timing-function: ease-in-out;
+    user-select: none;
+    width: 112px;
+    margin: 4px 20px;
+}
+
+.item + .item {
+    margin-left: 0px;
+}
+
+.item:hover, .addBtn:hover{
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.tile-icon {
+    align-items: center;
+    background-color: rgba(241, 243, 244, 1);
+    border-radius: 50%;
+    display: flex;
+    flex-shrink: 0;
+    height: 48px;
+    justify-content: center;
+    margin-top: 16px;
+    width: 48px;
+}
+
+.tile-icon img {
+    height: 24px;
+    width: 24px;
+}
+
+
+.tile-title {
+    direction: ltr;
+    align-items: center;
+    border-radius: 18px;
+    color: #fff;
+    display: flex;
+    height: 32px;
+    line-height: 32px;
+    margin-top: 6px;
+    padding: 2px 8px;
+    width: 88px;
+}
+
+.tile-title span {
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-shadow: none;
+    white-space: nowrap;
+    width: 100%;
+}
+
+/* 新增书签 */
+.addView {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.addItem {
+    padding: 10px 0;
+}
+
+.addItem label {
+    font-size: 14px;
+}
+
+.addItem input {
+    font-size: 14px;
+    width: 150px;
+    height: 22px;
+    line-height: 22px;
+    color: #fff;
+    border: none;
+    outline: 0;
+    background: none;
+    border-bottom: 2px solid #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    text-indent: 12px;
+}
+
+.addItem input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+.addItem input::-webkit-input-placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+
+.addItem input:focus {
+    width: 300px;
+    transition: width 1s;
+}
+
+.cancelBtn {
+    color: #fff;
+}
+.commitBtn {
+    color: #42b983;
+}
+
+/* 辅助样式 */
+.hideClass {
+    visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.showClass {
+    visibility: visible;
+    transform: rotateY(360deg);
+    transition: 0.8s;
+}
+
+/* 删除标签按钮 */
+.delItemBtn {
+    font-size: 16px;
+    width: 28px;
+    height: 28px;
+    line-height: 26px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+}
+
+.delItemBtn:hover {
+    color: #F56C6C;
+
+}
+
+.delItem {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.delItem:hover {
+    animation: shake 1s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    20%, 80% { transform: translate3d(0, +4px, 0); }
+    40%, 60% { transform: translate3d(0, -4px, 0); }
+    50% { transform: translate3d(0, -4px, 0); }
+}
+
+@-webkit-keyframes shake {
+    20%, 80% { transform: translate3d(0, +4px, 0); }
+    40%, 60% { transform: translate3d(0, -4px, 0); }
+    50% { transform: translate3d(0, -4px, 0); }
+}
+
+.emptyAddBtn {
+    background-color: rgba(255, 255, 255, .1);
+    color: #fff;
+    font-size: 100px;
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent;
+    align-items: center;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 112px;
+    line-height: 97px;
+    opacity: 1;
+    outline: none;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 300ms;
+    transition-property: left, top;
+    transition-timing-function: ease-in-out;
+    user-select: none;
+    width: 112px;
+    margin: 0 auto;
+
+    animation-timing-function:ease-in-out;
+	animation-name:breathe;
+	animation-duration:2700ms;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+    -webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-name:breathe;
+	-webkit-animation-duration:2700ms;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:alternate;
+}
+
+.emptyAddBtn:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .2);
+    animation: none;
+    -webkit-animation: none;
+    
+}
+
+@keyframes breathe {
+	0% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes breathe {
+	0% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.bgNone {
+    background: none;
+}
